@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Tarea 1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    </head>
+    <body>
+        <form  id="calcular-form">
+            <h3>Ingrese los coeficientes de la ecuacion :</h3>
+            <div id="variables">
+                <p><input type="number" size="2" id="a" name="a" placeholder="a" > X<sup>2</sup>+<input type="number" size="2" id="b" name="b" placeholder="b"  > X+<input type="number" size="2" id="c" name="c" placeholder="c"  >=0</p>
+            </div>
+        <h1><input value="Calcular" id="calcular-submit" type="submit" /></h1>
+        </form>
+
+        <div id="resultado">
+            <h3>Resultado de ecuacion</h3>
+            <p id="resultado1"></p>
+            <p id="resultado2"></p>
+        </div>
+
+        <!--linea que separa-->
+        <br/>
+        <hr>
+        <form id="PPT-form">
+            <h3>Seleccione su opcion :</h3>
+            <div id="opciones">
+                <!--checkbox para escojer piedra, papel o tijera-->
+                <input type="radio" name="opciones" value="piedra" id="piedra" checked="checked" />
+                <label for="piedra">Piedra</label>
+                <input type="radio" name="opciones" value="papel" id="papel" />
+                <label for="papel">Papel</label>
+                <input type="radio" name="opciones" value="tijera" id="tijera" />
+                <label for="tijera">Tijera</label>
+
+            </div>
+        <h1><input value="Jugar" id="PPT-submit" type="submit" /></h1>
+        </form>
+
+        <div id="elecciones-vs">                        
+        </div>
+
+        <div id="Ganador">                        
+        </div>
+
+          <!--linea que separa-->
+          <br/>
+          <hr>
+          <form id="tiempo-form">
+            <h3>Seleccione su opcion :</h3>
+            <div id="fecha">
+                <label>fecha de nacimiento</label>
+                <input type="date" name="fechanac" required id="fechanac"  />                               
+            </div>
+        <h1><input value="Enviar fecha" id="feN-submit" type="submit" /></h1>
+        </form>
+
+        <div id="tiempo-transcurrido">                        
+        </div>
+
+
+
+         <!--linea que separa-->
+         <br/>
+         <hr>
+         <form id="usuarios-form">
+           <h3>buscar usuarios :</h3>
+           <div id="buscarUsuario">
+               <label>Buscar por username</label>
+               <input type="text" name="txtBuscador" required id="txtBuscador"  />                               
+           </div>
+       <h1><input value="Buscar" id="BtnbusUsuario" type="submit"/><input value="mostrar todo" id="btnReiniciar" type="submit"/></h1>
+
+       </form>
+        
+       <div id="UsuariosList">
+        <table  >
+            <caption>Usuarios</caption>
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Username</th>
+                <th>Email</th>
+            </tr>	
+        </thead>	
+        <tbody id="TbUserList" style="align-content:center ;">	
+          
+           
+        </tbody>
+        </table>                        
+       </div>
+
+       
+        
+
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./Ecuaciones.js"></script>
+    <script src="./PPT.js"></script>
+    <script src="./tiempoTranscurrido.js"></script>
+    <script src="./usuarios.js"></script>
+    
+    </body>
+</html>
